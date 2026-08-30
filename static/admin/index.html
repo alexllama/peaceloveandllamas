@@ -4,14 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content Manager</title>
-    <!-- Netlify Identity Widget -->
+    <!-- Include Netlify Identity Widget -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
-    <!-- Include the script that builds the Decap CMS page -->
+    <!-- Include Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
     <script>
+      // Explicitly direct Netlify Identity to your Netlify site URL
       if (window.netlifyIdentity) {
+        window.netlifyIdentity.init({
+          APIUrl: "https://unrivaled-buttercream-682aac.netlify.app/.netlify/identity"
+        });
         window.netlifyIdentity.on("init", user => {
           if (!user) {
             window.netlifyIdentity.on("login", () => {
