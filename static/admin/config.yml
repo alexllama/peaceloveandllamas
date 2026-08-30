@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   site_domain: unrivaled-buttercream-682aac.netlify.app
+  identity_url: https://unrivaled-buttercream-682aac.netlify.app/.netlify/identity
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
