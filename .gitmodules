@@ -1,0 +1,3 @@
+[submodule "themes/paige"]
+	path = themes/paige
+	url = git@github.com:willfaught/paige.git
